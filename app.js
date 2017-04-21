@@ -2,10 +2,8 @@
 function sumChecker(arr, num) {
   let sumStartIndex = 0;
   let sumTally = 0;
-  const sumsArr = [];
 
   for (let i = 0; i < arr.length; ++i) {
-    sumsArr.push(arr[i]);
     if (arr[i] > arr[i-1]) {
       for (let j = i; j >= 0; --j) {
         sumTally += arr[j];
@@ -13,13 +11,16 @@ function sumChecker(arr, num) {
           break;
         }
       }
-      sumsArr.push(sumTally);
+      if (sumTally = num) {
+        return true;
+      }
       sumTally = sumTally ^ sumTally;
     }
+    else if (arr[i] === num) {
+      return true;
+    }
   }
-  console.log(sumsArr);
-
-  return sumsArr.indexOf(num) > -1;
+  return false;
 }
 
 module.exports = sumChecker;
