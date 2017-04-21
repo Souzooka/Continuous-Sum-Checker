@@ -1,4 +1,4 @@
-/*jshint*/
+/*jshint esversion:6*/
 function sumChecker(arr, num) {
   let sumStartIndex = 0;
   let sumTally = 0;
@@ -11,7 +11,7 @@ function sumChecker(arr, num) {
           break;
         }
       }
-      if (sumTally = num) {
+      if (sumTally === num) {
         return true;
       }
       sumTally = sumTally ^ sumTally;
