@@ -9,7 +9,11 @@ function sumChecker(arr, num) {
       if (sumTally === num) {
         return true;
       }
+      else if (sumTally > num) {
+        break;
+      }
     }
+    sumTally = 0;
   }
   return false;
 }
